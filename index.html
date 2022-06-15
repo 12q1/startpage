@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+
+<body onload="initializer()">
+    <div class="fullscreen-video-wrap">
+        <iframe id="boop"
+            src="https://www.youtube.com/embed/qa3JKuR9fgQ?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=qa3JKuR9fgQ&start=30"
+            frameborder="0" allowfullscreen>
+        </iframe>
+    </div>
+    <div class="background-overlay"></div>
+    <header class="start-header container">
+        <div class="header-content">
+            <!--digital clock start-->
+            <div class="datetime">
+                <div class="time">
+                    <span id="hour">00</span>:<span id="minutes">00</span>
+                    <span id="period">AM</span>
+                </div>
+                <div class="date">
+                    <span id="dayname">Day</span>,
+                    <span id="month">Month</span>
+                    <span id="daynum">00</span>,
+                    <span id="year">Year</span>
+                </div>
+            </div>
+            <!--digital clock end-->
+            <div class="search-form-container">
+                <form class="search-form" id="form" autocomplete="off">
+                    <input class="search-input" type="search" id="query" name="q" autocomplete="off"
+                        placeholder="Search..." aria-label="Perform a Google search">
+                    <button class="search-button">
+                        <svg viewBox="0 0 1024 1024">
+                            <path class="path1"
+                                d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+                            </path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="flex-container">
+                <div class="flex-content-left">
+                    <div class="squaregrid">
+                        <a href="https://www.reddit.com/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/reddit-logo.svg" alt=""></button></a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/mail.svg" alt=""></button></a>
+                        <a href="https://www.youtube.com/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/youtube.svg" alt=""></button></a>
+                        <a href="https://github.com/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/github.svg" alt=""></button></a>
+                        <a href="https://1337xto.to/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/jolly-roger.svg" alt=""></button></a>
+                        <a href="https://www.linkedin.com/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/linkedin.svg" alt=""></button></a>
+                        <a href="https://stackoverflow.com/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/stack-overflow.svg" alt=""></button></a>
+                        <a href="https://www.codecademy.com/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/coding.svg" alt=""></button></a>
+                        <a href="https://feedly.com/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/rss.svg" alt=""></button></a>
+                        <a href="https://trello.com/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/trello.svg" alt=""></button></a>
+                        <a href="https://calendar.google.com/calendar/u/0/r"><button class="cell"><img
+                                    class="website-logo" src="./website_logos/calendar.svg" alt=""></button></a>
+                        <a href="https://drive.google.com/drive/my-drive"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/google-drive.svg" alt=""></button></a>
+                        <a href="https://www.speedtest.net/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/speedometer.svg" alt=""></button></a>
+                        <a href="https://www.digitalocean.com/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/digitalocean.svg" alt=""></button></a>
+                        <a href="https://www.udemy.com/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/graduation-hat.svg" alt=""></button></a>
+                        <a href="https://www.rarbg.to/"><button class="cell"><img class="website-logo"
+                                    src="./website_logos/movie.svg" alt=""></button></a>
+                    </div>
+                </div>
+                <div class="flex-content-right">
+                    <div class="right-content-container">
+                        <div class="todo-input-container">
+                            <form id="myDIV" class="todo-header">
+                                <input type="text" id="todo-input" placeholder="To do..." autocomplete="off"
+                                    maxlength="30">
+                                <button onclick="newElementLocalStore(); return false;" class="addBtn">+</button>
+                            </form>
+                        </div>
+                        <ul id="myUL">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="news-section container">
+        <div class="news-content" id="media-feed">
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="startpage.js"></script>
+
+</html>
